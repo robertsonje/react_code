@@ -3,6 +3,13 @@ import React, {useState, useEffect} from 'react';
 function Counter(props) {
     const[count, setCount] = useState(0);
     const[calculation, setCalculation] = useState(0);
+    {/*
+    useEffect(() => {
+        setTimeout(() => {
+            setCount(count => count+1);
+        }, 1000);
+    });
+    */}
     useEffect(() => {
         setCalculation(() => count * 2);
     }, [count]); 
